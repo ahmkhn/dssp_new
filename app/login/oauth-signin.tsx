@@ -2,12 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { Provider } from "@supabase/supabase-js";
 import { oAuthSignIn } from "./actions";
-
+import Link from "next/link";
 type OAuthProvider = {
   name: Provider;
   displayName: string;
   icon?: JSX.Element;
 };
+
 
 export function OAuthButtons() {
   const oAuthProviders: OAuthProvider[] = [
@@ -54,6 +55,8 @@ export function OAuthButtons() {
           Login with {provider.displayName}
         </Button>
       ))}
+      <Link href="/todos" className="underline flex justify-center mt-3">View without signing in?</Link>
+      
     </>
   );
 }
