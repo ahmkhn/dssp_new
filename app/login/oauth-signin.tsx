@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { Provider } from "@supabase/supabase-js";
 import { oAuthSignIn } from "./actions";
-import google from "../../public/google.svg";
 
 type OAuthProvider = {
   name: Provider;
