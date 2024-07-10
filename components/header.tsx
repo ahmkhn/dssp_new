@@ -17,7 +17,6 @@ export default async function Header() {
           <a className="mr-6 flex items-center space-x-2" href="/">
             <span className="font-bold">DSSP</span>
           </a>
-          <Link href="/todos" className="underline">Interactive Map</Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
           {user !== null ? (

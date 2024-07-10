@@ -55,7 +55,7 @@ export function OAuthButtons() {
           Login with {provider.displayName}
         </Button>
       ))}
-      <Link href="/todos" className="underline flex justify-center mt-3">View without signing in?</Link>
+      <Link href="/mapu" className="underline flex justify-center mt-3">View without signing in?</Link>
       
     </>
   );

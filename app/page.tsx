@@ -10,7 +10,7 @@ export default async function Index() {
           developed by @ahmkhn
         </a>
         <h1 className="font-sans text-balance font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-          Decolonizing Social Sciences in Pakistan.
+          Decolonizing Social Sciences in Pakistan
         </h1>
         <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
           An application that fosters a global community where users can share their research and collaborate, promoting a sense of unity and mutual support.
