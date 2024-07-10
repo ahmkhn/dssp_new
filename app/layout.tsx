@@ -1,6 +1,7 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import Header from "@/components/header";
+import "primereact/resources/themes/md-light-deeppurple/theme.css";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
