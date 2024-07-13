@@ -25,10 +25,16 @@ export default async function Header() {
               <Button>Sign Out</Button>
             </form>
           ) : (
-            <Button asChild>
+            <Button className="hover:bg-white hover:text-black hover:shadow hover:shadow-slate-600" asChild>
               <Link href="/login">Sign In</Link>
             </Button>
+            
           )}
+        </div>
+        <div className="ml-4 -mr-16">
+          <Button className=" hover:bg-white hover:text-black hover:shadow hover:shadow-slate-600">
+            <Link href="/about">About Us</Link>
+          </Button>
         </div>
       </div>
     </header>
