@@ -5,13 +5,19 @@ import { Icon } from "leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster"; 
 import { useState } from 'react';
 import { Dialog } from 'primereact/dialog';
+import { createClient } from "@/utils/supabase/server";
 
-export default function Worldmap() {
+type worldMapProps = {
+    authorized: boolean | null;
+}
+export default function Worldmap( {authorized} : worldMapProps) {
     const [initialPosition, setInitialPosition] = useState<[number, number]>([31.3909,74.2417]);
     const [selectedPosition, setSelectedPosition] = useState<[number, number]>([0,0]);
     const [showInputDiv, setShowInputDiv] = useState(false);
     const [visible, setVisible] = useState(false);
 
+
+    
     const AddUserMarker = () => {
         setVisible(true);
         return showInputDiv ? (
@@ -26,16 +32,17 @@ export default function Worldmap() {
     }
 
     const Markers = () => {
-        useMapEvents({
-            click(e) {                                
-                setSelectedPosition([
-                    e.latlng.lat,
-                    e.latlng.lng
-                ]);
-                setShowInputDiv(true); // Show the input div
-            },            
-        });
-
+        if(authorized){
+            useMapEvents({
+                click(e) {                                
+                    setSelectedPosition([
+                        e.latlng.lat,
+                        e.latlng.lng
+                    ]);
+                    setShowInputDiv(true); // Show the input div
+                },            
+            });
+        }
         return selectedPosition ? (
             <Marker           
                 key={selectedPosition[0]}
@@ -48,7 +55,7 @@ export default function Worldmap() {
 
     const customIcon = new Icon({
         iconUrl: "https://www.reshot.com/preview-assets/icons/RX7PT3FJZK/pin-RX7PT3FJZK.svg",
-        iconSize: [80,50]
+        iconSize: [30,30]
     });
 
     return (

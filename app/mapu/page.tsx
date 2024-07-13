@@ -14,10 +14,10 @@ export default async function MapNotSignedIn() {
     //return redirect("/login");
   //}
 
-  const { data: todos } = await supabase
+  /*const { data: todos } = await supabase
     .from("todos")
     .select()
-    .order("inserted_at", { ascending: false });
+    .order("inserted_at", { ascending: false });*/
 
   return (
     <section className="p-3 pt-6 max-w-4xl w-full flex flex-col gap-4">
@@ -26,7 +26,7 @@ export default async function MapNotSignedIn() {
       </h1>
       <Separator className="w-full" />
       <div className="h-[70vh] max-h-full border-black rounded-lg margin w-full" style={{borderRadius:'8px', overflow:'hidden'}}>
-        <Worldmap/>
+        <Worldmap authorized={user !== null}/>
       </div>
     </section>
   );
