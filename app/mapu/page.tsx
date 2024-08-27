@@ -28,21 +28,21 @@ export default async function MapNotSignedIn() {
             </h1>
           </div>
           <Separator className="w-full" />
-          <p className="scroll-m-20 text-lg font-extrabold tracking-tight lg:text-xl text-center">
+          <p className="scroll-m-20 text-lg tracking-tight lg:text-xl text-center">
             Welcome to the map! Scroll around and click on markers to find out about other people's research!
           </p>
-          <p className="scroll-m-20 text-lg font-extrabold tracking-tight lg:text-xl text-center">
-            Click on the map to input a marker, make sure you're signed in first!
+          <p className="scroll-m-20 text-lg tracking-tight lg:text-xl text-center">
+            Click on the map to input a marker, make <strong className="underline">sure</strong> you're signed in first!
           </p>
         </section>
         <section className="p-3 pt-6 max-w-full w-full flex flex-col gap-6">
           <div className="flex gap-4 w-full">
-            <div className="w-1/4 p-6 border-gray-300 border rounded-lg shadow-lg bg-gray-200 flex flex-col h-[40rem]" style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <h2 className="text-2xl font-bold mb-6 text-center text-black">User Spotlight</h2>
-              <h3 className="font-semibold text-gray-700 text-center mb-4">Weekly user spotlight, submit a form here for a chance to be featured!</h3>
+            <div className="w-1/4 p-6 border-black border rounded-lg shadow-lg bg-salmon flex flex-col h-[40rem]" style={{ borderRadius: '8px', overflow: 'hidden' }}>
+              <h2 className="text-2xl font-bold mb-6 text-center text-white">User Spotlight</h2>
+              <h3 className="text-white text-center mb-4">Weekly user spotlight, submit a form here for a chance to be featured!</h3>
               {/* User spotlight content here */}
-              <div className="bg-gray-100 p-6 rounded-md text-center">
-                <p className="font-semibold text-3xl text-gray-900">User Name</p>
+              <div className="border-sand border p-6 rounded-md text-center">
+                <p className="font-medium text-3xl text-white">User Name</p>
                 <p className="text-md text-gray-800">Title</p>
                 <p className="text-sm text-gray-600">Research details or bio...</p>
                 <p className="text-md text-gray-800">Example Location</p>
